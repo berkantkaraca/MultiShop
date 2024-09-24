@@ -34,7 +34,7 @@ namespace MultiShop.Catolog.Controllers
         public async Task<IActionResult> CreateProduct(CreateProductDto createProductDto)
         {
             await _productService.CreateProductAsync(createProductDto);
-            return Ok();
+            return Ok("Ürün başarıyla eklendi.");
         }
 
         [HttpDelete]
