@@ -17,7 +17,7 @@ namespace MultiShop.Discount.Services
             string query = "INSERT INTO Coupons (Code, Rate, IsActive, ValidDate) VALUES (@code, @rate, @isActive, @validDate)";
             var parameters = new DynamicParameters();
             parameters.Add("@code", createCouponDto.Code);
-            parameters.Add("@eate", createCouponDto.Rate);
+            parameters.Add("@rate", createCouponDto.Rate);
             parameters.Add("@isActive", createCouponDto.IsActive);
             parameters.Add("@validDate", createCouponDto.ValidDate);
 
@@ -65,12 +65,13 @@ namespace MultiShop.Discount.Services
 
         public async Task UpdateDiscountCouponAsync(UpdateDiscountCouponDto updateCouponDto)
         {
-            string query = "UPDATE Coupons SET Code = @code, Rate = @rate, IsActive = @isActive, ValidDate = @validDate WHERE CouponId = @id";
+            string query = "UPDATE Coupons SET Code = @code, Rate = @rate, IsActive = @isActive, ValidDate = @validDate WHERE CouponId = @couponId";
             var parameters = new DynamicParameters();
             parameters.Add("@code", updateCouponDto.Code);
             parameters.Add("@rate", updateCouponDto.Rate);
             parameters.Add("@isActive", updateCouponDto.IsActive);
             parameters.Add("@validDate", updateCouponDto.ValidDate);
+            parameters.Add("@couponId", updateCouponDto.CouponId);
 
             using (var connection = _context.CreateConnection())
             {
