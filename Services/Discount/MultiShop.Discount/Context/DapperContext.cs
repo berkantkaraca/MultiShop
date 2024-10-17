@@ -17,7 +17,7 @@ namespace MultiShop.Discount.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-BD3PDJJ\\SQLEXPRESS;initial catalog=MultiShopDiscountDb;integrated security=true;");
+            optionsBuilder.UseSqlServer("Server=BKARACA\\SQLEXPRESS;initial catalog=MultiShopDiscountDb;integrated security=true;");
         }
 
         public DbSet<Coupon> Coupons { get; set; }
