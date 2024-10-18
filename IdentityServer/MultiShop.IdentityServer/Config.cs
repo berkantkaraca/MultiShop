@@ -22,8 +22,8 @@ namespace MultiShop.IdentityServer
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
         {
             new IdentityResources.OpenId(),
-            new IdentityResources.Profile(),
-            new IdentityResources.Email()
+            new IdentityResources.Email(),
+            new IdentityResources.Profile()
         };
 
         public static IEnumerable<ApiScope> ApiScopes => new ApiScope[]
@@ -44,7 +44,7 @@ namespace MultiShop.IdentityServer
                 ClientName = "Multi Shop Visitor User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = { new Secret("multishopsecret".Sha256()) },
-                AllowedScopes = { "CatalogReadPermission"}
+                AllowedScopes = { "DiscountFullPermission" }
             },
 
             //Manager
