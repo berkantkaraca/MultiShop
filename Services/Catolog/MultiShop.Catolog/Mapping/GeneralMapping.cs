@@ -31,6 +31,7 @@ namespace MultiShop.Catolog.Mapping
             CreateMap<ProductImage, ResultProductImageDto>().ReverseMap();
             CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
 
+            CreateMap<Product, ResultProductsWithCategoryDto>().ReverseMap();
         }
     }
 }

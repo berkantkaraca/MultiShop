@@ -1,13 +1,8 @@
-﻿using MultiShop.DtoLayer.CatalogDtos.CategoryDtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MultiShop.Catolog.Dtos.CategoryDtos;
 
-namespace MultiShop.DtoLayer.CatalogDtos.ProductDtos
+namespace MultiShop.Catolog.Dtos.ProductDtos
 {
-    public class ResultProductWithCategoryDto
+    public class ResultProductsWithCategoryDto
     {
         public string ProductId { get; set; }
         public string ProductName { get; set; }
