@@ -17,6 +17,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
+
         [Route("Index")]
         public async Task<IActionResult> Index()
         {
@@ -34,7 +35,6 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
                 var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
                 return View(values);
             }
-
             return View();
         }
 
