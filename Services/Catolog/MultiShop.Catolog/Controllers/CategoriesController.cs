@@ -6,7 +6,8 @@ using MultiShop.Catolog.Services.CategoryServices;
 
 namespace MultiShop.Catolog.Controllers
 {
-    [Authorize]
+    //[Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
