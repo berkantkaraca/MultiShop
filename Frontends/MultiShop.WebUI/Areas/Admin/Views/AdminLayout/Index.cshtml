@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_AdminLayoutHeadComponentPartial")
+
+<body class="sidebar-mini">
+    <div class="wrapper">
+        @await Component.InvokeAsync("_AdminLayoutHeaderComponentPartial")
+
+        @await Component.InvokeAsync("_AdminLayoutSidebarComponentPartial")
+
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1>@ViewBag.v4</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i> @ViewBag.v1</a></li>
+                    <li class="active"><i class="fa fa-envelope-o"></i> @ViewBag.v2</li>
+                    <li class="active"><i class="fa fa-bars"></i> @ViewBag.v3</li>
+                </ol>
+            </section>
+
+            @RenderBody()
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer dark-bg">
+            <div class="pull-right hidden-xs"> Version 1.0</div>
+            Copyright &copy; 2017 Yourdomian. All rights reserved.
+        </footer>
+    </div>
+    <!-- wrapper -->
+    <!-- jQuery -->
+    <script src="~/Template/Admin/dist/js/jquery.min.js"></script>
+    <script src="~/Template/Admin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Template/Admin/dist/js/ovio.js"></script>
+</body>
+</html>
