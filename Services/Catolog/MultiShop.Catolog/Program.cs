@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using MultiShop.Catolog.Services.CategoryServices;
+using MultiShop.Catolog.Services.FeatureSliderServices;
 using MultiShop.Catolog.Services.ProductDetailServices;
 using MultiShop.Catolog.Services.ProductImageServices;
 using MultiShop.Catolog.Services.ProductServices;
@@ -19,6 +20,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
+builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
